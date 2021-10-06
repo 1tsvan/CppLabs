@@ -26,9 +26,7 @@ void reduce() для сокращения дроби, а также статич
 
 class Fraction {
 
-	int chisl1, znam1, chisl2, znam2, number, n1,n2;
-	int sum  , razn  , delen  , mnoj  ;
-	//
+	int number;
 
 	
 public:
@@ -51,15 +49,15 @@ public:
 	friend std::ostream& operator<< (std::ostream& out, const Fraction& n);
 	friend std::istream& operator>> (std::istream& in, Fraction& n);
 
-	static void Reduce(int chisl1,int  znam1) {
-		if (znam1 != 0) {
-			int gcd_op = gcd(chisl1, znam1);
-			chisl1 = chisl1 / gcd_op;
-			znam1 = znam1 / gcd_op;
-			std::cout << chisl1 << "/" << znam1 << "\n";
-		
+	static void Reduce(int n1, int  n2) {
+		if (n2 != 0) {
+			int gcd_op = gcd(n1, n2);
+			n1 = n1 / gcd_op;
+			n2 = n2 / gcd_op;
+			std::cout << n1 << "/" << n2 << "\n";
 
-			
+
+
 		}
 
 		count();
