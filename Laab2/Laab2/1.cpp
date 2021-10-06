@@ -23,12 +23,19 @@ class Vector
 {
 private:
 	int size=18;
-	int * array;
+	
+	int number;
+	
 public:
-	Vector()
+	int* array;
+
+	Vector(int num = 0) : number(num)
 	{
+		
 		array = new int[size];
 	}
+	
+	
 
 	int* Inicializ() {
 		for (int i = 0;i < size;i++) {
@@ -41,11 +48,45 @@ public:
 		return array;
 	}
 
+	Vector& operator++();	//префикс
+	Vector& operator--();	//префикс
+	Vector operator++(int); //  постфикс
+	Vector operator--(int); //  постфикс
+	friend std::ostream& operator<< (std::ostream& out, const Vector& n);
+
+
 	int operator[] ( int index);
 
 	~Vector(){ delete[] array; }
 
 };
+
+Vector& Vector:: operator++() {
+	++number;
+	return *this;
+}
+Vector& Vector:: operator--() {
+	--number;
+	return *this;
+}
+Vector Vector::operator--(int) {
+
+	Vector temp(number);
+	--(*this);
+	return temp;
+}
+Vector Vector::operator++(int) {
+
+	Vector temp(number);
+	++(*this);
+	return temp;
+}
+std::ostream& operator<< (std::ostream& out, const Vector& n)
+{
+	out << n.number;
+	return out;
+}
+
 
 int Vector::operator[] ( int index)
 {
@@ -133,6 +174,7 @@ public:
 		for (int i = 0; i < row; i++) {
 			delete[] arr[i];
 		}
+		delete[] arr;
 	}
 };
 
@@ -166,12 +208,23 @@ int main()
 {
 	
 	Vector v;
-	v.Inicializ();
 	Matrix m;
+
+	v.Inicializ();
+	v.array[0]++;
+	v.array[0]--;
+	++v.array[0];
+	--v.array[0];
+	
 	m.setAt(0, 1, 2);
 	m.at(0, 1);
 	m.newArray(v.Inicializ());
 	m.printtt(m.arr);
+
+	m.arr[0][0]++;
+	m.arr[0][0]--;
+	++m.arr[0][0];
+	--m.arr[0][0];
 	
 
 	return 0;

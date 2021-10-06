@@ -1,7 +1,6 @@
-﻿  2.cpp
-D:\С++ Projects\Lab2\Laab2\2\2.cpp(41,35): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-D:\С++ Projects\Lab2\Laab2\2\2.cpp(80,7): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-D:\С++ Projects\Lab2\Laab2\2\2.cpp(83,26): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-D:\С++ Projects\Lab2\Laab2\2\2.cpp(105,7): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-D:\С++ Projects\Lab2\Laab2\2\2.cpp(108,12): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+﻿  Frac.cpp
+D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(90,6): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(93,11): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(110,6): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(113,23): warning C4244: =: преобразование "double" в "int", возможна потеря данных
   2.vcxproj -> D:\С++ Projects\Lab2\Laab2\Debug\2.exe

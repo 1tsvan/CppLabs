@@ -17,169 +17,36 @@ void reduce() для сокращения дроби, а также статич
 */
 
 
-
+#include "Frac.h"
 #include <iostream>
 #include <random>
 #include <string>
 #include <sstream>
 
-
-class Fraction {
-
-	int number;
-
-	
-public:
-	static int count() {
-		static int count = 0;
-		return count++;
-	}
+using namespace std;
 
 
-	Fraction(double num = 0) : number(num)
-	{
-	}
-
-	int getNum();
-
-	Fraction operator*(const Fraction&);
-	Fraction operator/(const Fraction &);
-	Fraction operator+(const Fraction&);
-	Fraction operator-(const Fraction&  );
-	friend std::ostream& operator<< (std::ostream& out, const Fraction& n);
-	friend std::istream& operator>> (std::istream& in, Fraction& n);
-
-	static void Reduce(int n1, int  n2) {
-		if (n2 != 0) {
-			int gcd_op = gcd(n1, n2);
-			n1 = n1 / gcd_op;
-			n2 = n2 / gcd_op;
-			std::cout << n1 << "/" << n2 << "\n";
-
-
-
-		}
-
-		count();
-	}
-	static int gcd(int n, int m) {
-		while (m > 0) {
-			int c = n % m;
-			n = m;
-			m = c;
-		}
-		
-		
-		return n;
-	}
-	static void printAsFraction(double decimal_fraction) {
-		int i, c, z;
-		int x;
-		x = decimal_fraction;
-		decimal_fraction -= x;
-		  i = x;
-		  c = decimal_fraction * 100;
-		  z = 100;
-
-		  for (int k = 0;k < 5;k++)
-			  for (int j = 2;j <= c;j++)
-				  if ((!(c % j)) && (!(z % j))) {
-					  c /= j;
-					  z /= j;
-				  }
-		  std::cout  << c << "/" << z;
-
-		  count();
-		  
-	}
-	
-
-	static void printAsFraction(char decimal_fraction[]) {
-		int i, c, z;
-		double smth = atof(decimal_fraction);
-
-		int x;
-		
-		x = smth;
-		decimal_fraction -= x;
-		i = x;
-		c = smth * 100;
-		z = 100;
-
-		for (int k = 0;k < 5;k++)
-			for (int j = 2;j <= c;j++)
-				if ((!(c % j)) && (!(z % j))) {
-					c /= j;
-					z /= j;
-				}
-		std::cout << c << "/" << z;
-
-		
-	}
-
-	
-
-};
-
-int Fraction:: getNum()  {
-	return number;
-}
-
-std::ostream& operator<< (std::ostream& out, const Fraction& n)
+ostream& operator<<(ostream& stream, Frac obj)
 {
-	out << n.number;
-	return out;
+	stream << obj.n << '/' << obj.d;
+	return stream;
 }
-std::istream& operator>> (std::istream& in,  Fraction& n)
-{
-	in >> n.number;
-	return in;
-}
-
-Fraction Fraction::operator*(const Fraction& n) {
-	Fraction temp;
-	temp.number = number * n.number;
-
-	return temp;
-
-}
-Fraction Fraction::operator+(const Fraction& n) {
-	Fraction temp;
-	temp.number = number + n.number;
-	return temp;
-
-}
-Fraction Fraction::operator-(const Fraction& n) {
-	Fraction temp;
-	temp.number = number - n.number;
-	return temp;
-}
-Fraction Fraction::operator/(const Fraction & n) {
-
-	Fraction temp;
-	temp.number = number / n.number;
-
-	return temp;
-
-	
-}
-
-
 
 int main() {
 
-	setlocale(LC_ALL, "");
-	Fraction pita;
-	Fraction num1 = 2,num2 = 4,num3 = 5,num4 = 10;
-	pita.gcd(num1.getNum(), num2.getNum());
-	pita.Reduce(num1.getNum(), num2.getNum());
-	pita.printAsFraction(0.5);
-	std::cout << '\n' << num1 * num2 << "	" << num2 - num1 << "	 ";
-	std::cout << '\n' << num4 / num2 << "	" << num2 + num1 << "	 ";
-	std::cout << '\n';
-	std::cout << pita.count();
+	Frac f1(1, 2), f2(3, 4);
 
 
+	std::cout << f1 + f2 << '\n';
+	std::cout << f1 - f2 << '\n';
+	std::cout << f1 * f2 << '\n';
+	std::cout << f1 / f2 << '\n';
+	Frac f;
+	f.gcd(10,20);
+	f.Reduce(4, 6);
+	f.printAsFraction(0.2);
+	std::cout << f1.count();
+	
 	
 	return 0;
 }
