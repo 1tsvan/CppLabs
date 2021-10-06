@@ -59,9 +59,10 @@ private:
 
 	int number;
 	static const int row = 9, column = 2; 
-	int** arr;
+	
 	
 public:
+	int** arr;
 
 	Matrix(int num = 0) : number(num)
 	{
@@ -165,9 +166,13 @@ int main()
 {
 	
 	Vector v;
+	v.Inicializ();
 	Matrix m;
-
+	m.setAt(0, 1, 2);
+	m.at(0, 1);
 	m.newArray(v.Inicializ());
+	m.printtt(m.arr);
+	
 
 	return 0;
 }

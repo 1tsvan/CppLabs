@@ -25,10 +25,10 @@ void reduce() для сокращения дроби, а также статич
 
 
 class Fraction {
-private:
+
 	int chisl1, znam1, chisl2, znam2, number, n1,n2;
-	int sum = 0, razn = 0, delen = 0, mnoj = 0;
-	int i, c, z;
+	int sum  , razn  , delen  , mnoj  ;
+	//
 
 	
 public:
@@ -51,7 +51,7 @@ public:
 	friend std::ostream& operator<< (std::ostream& out, const Fraction& n);
 	friend std::istream& operator>> (std::istream& in, Fraction& n);
 
-	void Reduce(int chisl1,int  znam1) {
+	static void Reduce(int chisl1,int  znam1) {
 		if (znam1 != 0) {
 			int gcd_op = gcd(chisl1, znam1);
 			chisl1 = chisl1 / gcd_op;
@@ -64,7 +64,7 @@ public:
 
 		count();
 	}
-	int gcd(int n, int m) {
+	static int gcd(int n, int m) {
 		while (m > 0) {
 			int c = n % m;
 			n = m;
@@ -74,7 +74,8 @@ public:
 		
 		return n;
 	}
-	void printAsFraction(double decimal_fraction) {
+	static void printAsFraction(double decimal_fraction) {
+		int i, c, z;
 		int x;
 		x = decimal_fraction;
 		decimal_fraction -= x;
@@ -95,8 +96,8 @@ public:
 	}
 	
 
-	void printAsFraction(char decimal_fraction[]) {
-
+	static void printAsFraction(char decimal_fraction[]) {
+		int i, c, z;
 		double smth = atof(decimal_fraction);
 
 		int x;
@@ -118,52 +119,7 @@ public:
 		
 	}
 
-	void summa() {
-		Fraction c1, c2, z1, z2;
-		std::cin >> c1;
-		std::cin >> z1;
-		std::cin >> c2;
-		std::cin >> z2;
-
-		std::cout << c1.getNum() * z2.getNum() + c2.getNum() * z1.getNum() << " / " << z1.getNum() * z2.getNum();
-
-		count();
-	}
-	void raznost() {
-		Fraction c1, c2, z1, z2;
-		std::cin >> c1;
-		std::cin >> z1;
-		std::cin >> c2;
-		std::cin >> z2;
-
-		std::cout << c1.getNum() * z2.getNum() - c2.getNum() + z1.getNum() << " / " << z1.getNum() * z2.getNum();
-
-		count();
-	}
-
-	void proizv() {
-		Fraction c1, c2, z1, z2;
-		std::cin >> c1;
-		std::cin >> z1;
-		std::cin >> c2;
-		std::cin >> z2;
-
-		std::cout << c1.getNum() * c2.getNum() << " / " << z1.getNum() * z2.getNum();
-
-		count();
-	}
-
-	void delenie() {
-		Fraction c1, c2, z1, z2;
-		std::cin >> c1;
-		std::cin >> z1;
-		std::cin >> c2;
-		std::cin >> z2;
-
-		std::cout << c1.getNum() * z2.getNum()  << " / " << z1.getNum() * c2.getNum();
-
-		count();
-	}
+	
 
 };
 
@@ -184,27 +140,26 @@ std::istream& operator>> (std::istream& in,  Fraction& n)
 
 Fraction Fraction::operator*(const Fraction& n) {
 	Fraction temp;
-	temp.mnoj = mnoj * n.mnoj;
+	temp.number = number * n.number;
 
 	return temp;
 
-	
 }
 Fraction Fraction::operator+(const Fraction& n) {
 	Fraction temp;
-	temp.sum = sum + n.sum;
+	temp.number = number + n.number;
 	return temp;
 
 }
 Fraction Fraction::operator-(const Fraction& n) {
 	Fraction temp;
-	temp.razn += razn - n.razn;
+	temp.number = number - n.number;
 	return temp;
 }
 Fraction Fraction::operator/(const Fraction & n) {
 
 	Fraction temp;
-	temp.delen += delen / n.delen;
+	temp.number = number / n.number;
 
 	return temp;
 
@@ -217,61 +172,16 @@ int main() {
 
 	setlocale(LC_ALL, "");
 	Fraction pita;
+	Fraction num1 = 2,num2 = 4,num3 = 5,num4 = 10;
+	pita.gcd(num1.getNum(), num2.getNum());
+	pita.Reduce(num1.getNum(), num2.getNum());
+	pita.printAsFraction(0.5);
+	std::cout << '\n' << num1 * num2 << "	" << num2 - num1 << "	 ";
+	std::cout << '\n' << num4 / num2 << "	" << num2 + num1 << "	 ";
+	std::cout << '\n';
+	std::cout << pita.count();
 
-	std::cout<< "1 - сложение, 2 - умножение \n 3 - вычитание, 4 - деление \n 5 - сократить, 6 - НОД \n 7 - правильная дробь \n 8 - кол-во дробей \n 0 - Выход \n";
-	int num = 1;
-	while (num!=0)
-	{
-		std::cout << "Номер операции: \n";
-		std::cin >> num;
-		if (num == 1) {
-			pita.summa();
-		}
-		else if(num == 2)
-		{
-			pita.proizv();
-		}
-		else if (num == 3)
-		{
-			pita.raznost();
-		}
-		else if (num == 4)
-		{
-			pita.delenie();
-		}
-		else if (num == 5)
-		{
-			Fraction c, z;
-			std::cout << "Введите числитель и знаменатель: ";
-			std::cin >> c;
-			std::cin >> z;
-			pita.Reduce(c.getNum(), z.getNum());
-		}
-		else if (num == 6)
-		{
-			Fraction c, z;
-			std::cout << "Введите 2 числа: ";
-			std::cin >> c;
-			std::cin >> z;
-			std::cout<<pita.gcd(c.getNum(), z.getNum());
-		}
-		else if (num == 7)
-		{
-			
-			double d;
-			std::cout << "Введите десятичное число: ";
-			std::cin >> d;
-			 pita.printAsFraction(d);
-			
-		}
-		else if (num == 8)
-		{
-			std::cout << pita.count();
 
-		}
-		
-	}
-	
 	
 	return 0;
 }

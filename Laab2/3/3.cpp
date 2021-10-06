@@ -213,16 +213,16 @@ int main() {
 	array[++count] = c3.temp;
 
 	std::cout << "\n";
-	Condition c4 = Condition("Sda", "4", 34.9, 2007);
-	c4.getCond();
-	array[++count] = c4.temp;
+	Condition  * c4 = new  Condition("Sda", "4", 34.9, 2007);
+	c4->getCond();
+	array[++count] = c4->temp;
 
-	Condition c5;
-	c5.setcond("asd", "5", 75.0, -15.0, 0, 2005);
-	c5.getCond();
-	array[++count] = c5.temp;
+	Condition * c5 =  new Condition();
+	c5->setcond("asd", "5", 75.0, -15.0, 0, 2005);
+	c5->getCond();
+	array[++count] = c5->temp;
 
-	std::cout << "Режим техники: " << c1.rezhim << " " << c2.rezhim << " " << c3.rezhim << " " << c4.rezhim << " " << c5.rezhim;
+	std::cout << "Режим техники: " << c1.rezhim << " " << c2.rezhim << " " << c3.rezhim << " " << c4->rezhim<< " " << c5->rezhim;
 	medianaTemp(array);
 
 	std::cout << "\n";
