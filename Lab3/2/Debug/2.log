@@ -1,0 +1,4 @@
+﻿  main2.cpp
+D:\С++ Projects\Lab3\2\main2.cpp(15,15): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab3\2\main2.cpp(45,23): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  2.vcxproj -> D:\С++ Projects\Lab3\1\Debug\2.exe
