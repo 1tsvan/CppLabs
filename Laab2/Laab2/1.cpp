@@ -25,9 +25,10 @@ private:
 	int size=18;
 	
 	int number;
-	
-public:
+
 	int* array;
+public:
+	
 
 	Vector(int num = 0) : number(num)
 	{
@@ -62,24 +63,31 @@ public:
 };
 
 Vector& Vector:: operator++() {
-	++number;
+	for (int i = 0; i < sizeof(array) - 1; ++i) {
+		array[i] += 1;
+	}
 	return *this;
 }
 Vector& Vector:: operator--() {
-	--number;
+	for (int i = 0; i < sizeof(array) - 1; ++i) {
+		array[i] -= 1;
+	}
 	return *this;
+	
 }
 Vector Vector::operator--(int) {
 
-	Vector temp(number);
-	--(*this);
-	return temp;
+	for (int i = 0; i < sizeof(array) - 1; ++i) {
+		array[i] -= 1;
+	}
+	return *this;
 }
 Vector Vector::operator++(int) {
 
-	Vector temp(number);
-	++(*this);
-	return temp;
+	for (int i = 0; i < sizeof(array) - 1; ++i) {
+		array[i] += 1;
+	}
+	return *this;
 }
 std::ostream& operator<< (std::ostream& out, const Vector& n)
 {
@@ -101,9 +109,9 @@ private:
 	int number;
 	static const int row = 9, column = 2; 
 	
-	
-public:
 	int** arr;
+public:
+	
 
 	Matrix(int num = 0) : number(num)
 	{
@@ -179,24 +187,49 @@ public:
 };
 
 Matrix& Matrix:: operator++() {
-	++number;
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < column; j++)
+		{
+			*(*(arr + i) + j) += 1;
+		}
+	}
+
 	return *this;
 }
 Matrix& Matrix:: operator--() {
-	--number;
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < column; j++)
+		{
+			*(*(arr + i) + j) -= 1;
+		}
+	}
+
 	return *this;
 }
 Matrix Matrix::operator--(int) {
 
-	Matrix temp(number);
-	--(*this);
-	return temp;
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < column; j++)
+		{
+			*(*(arr + i) + j) -= 1;
+		}
+	}
+
+	return *this;
 }
 Matrix Matrix::operator++(int) {
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < column; j++)
+		{
+			*(*(arr + i) + j) += 1;
+		}
+	}
 
-	Matrix temp(number);
-	++(*this);
-	return temp;
+	return *this;
 }
 std::ostream& operator<< (std::ostream& out, const Matrix& n)
 {
@@ -207,25 +240,27 @@ std::ostream& operator<< (std::ostream& out, const Matrix& n)
 int main()
 {
 	
-	Vector v;
-	Matrix m;
+	Vector * v = new Vector();
+	Matrix * m = new Matrix();
 
-	v.Inicializ();
-	v.array[0]++;
-	v.array[0]--;
-	++v.array[0];
-	--v.array[0];
-	
-	m.setAt(0, 1, 2);
-	m.at(0, 1);
-	m.newArray(v.Inicializ());
-	m.printtt(m.arr);
 
-	m.arr[0][0]++;
-	m.arr[0][0]--;
-	++m.arr[0][0];
-	--m.arr[0][0];
+	v->Inicializ();
+
+	v++;
+	++v;
+	v--;
+	--v;
 	
+	
+	m->setAt(0, 1, 2);
+	m->at(0, 1);
+	m->newArray(v->Inicializ());
+
+	m++;
+	++m;
+	--m;
+	m--;
+
 
 	return 0;
 }

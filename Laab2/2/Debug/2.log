@@ -1,6 +1,10 @@
-﻿  Frac.cpp
-D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(90,6): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(93,11): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(110,6): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(113,23): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+﻿  2.cpp
+  Frac.cpp
+D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(89,6): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(93,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(99,6): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(113,6): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(117,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab2\Laab2\2\Frac.cpp(123,6): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  Создание кода...
   2.vcxproj -> D:\С++ Projects\Lab2\Laab2\Debug\2.exe

@@ -86,20 +86,23 @@ void Frac::printAsFraction(char decimal_fraction[])
 	double smth = atof(decimal_fraction);
 
 	int x;
-
 	x = smth;
-	decimal_fraction -= x;
+	smth -= x;
+
+	int rang = 0;
+	int n = smth;
+	while (int(smth) != smth) {
+		smth *= 10;
+		++rang;
+	}
 	i = x;
-	c = smth * 100;
+	c = smth;
 	z = 100;
 
-	for (int k = 0;k < 5;k++)
-		for (int j = 2;j <= c;j++)
-			if ((!(c % j)) && (!(z % j))) {
-				c /= j;
-				z /= j;
-			}
-	std::cout << c << "/" << z;
+
+	std::cout << c << "/" << pow(10, rang);
+
+	count();
 
 }
 
@@ -109,17 +112,19 @@ void Frac::printAsFraction(double decimal_fraction)
 	int x;
 	x = decimal_fraction;
 	decimal_fraction -= x;
+	
+	int rang = 0;
+	int n = decimal_fraction;
+	while (int(decimal_fraction) != decimal_fraction) {
+		decimal_fraction *= 10;
+		++rang;
+	}
 	i = x;
-	c = decimal_fraction * 100;
+	c = decimal_fraction;
 	z = 100;
 
-	for (int k = 0;k < 5;k++)
-		for (int j = 2;j <= c;j++)
-			if ((!(c % j)) && (!(z % j))) {
-				c /= j;
-				z /= j;
-			}
-	std::cout << c << "/" << z;
+
+	std::cout << c << "/" << pow(10,rang);
 
 	count();
 }

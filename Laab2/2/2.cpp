@@ -44,7 +44,7 @@ int main() {
 	Frac f;
 	f.gcd(10,20);
 	f.Reduce(4, 6);
-	f.printAsFraction(0.2);
+	f.printAsFraction(0.000000000015);
 	std::cout << f1.count();
 	
 	
