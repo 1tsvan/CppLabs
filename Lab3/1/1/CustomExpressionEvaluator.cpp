@@ -9,19 +9,20 @@
 
 double CustomExpressionEvaluator::calculate() {
 
-	 res_ = 1;
+	 res_ = arr[0];
+	 int j = 1;
 	bool b = true;
-	for (int i = 0; i < sizeof(arr) -1 ; ++i) {
-		if (*(ExpressionEvaluator::arr + i) != 0) {
-			if (b == true) {
-				res_ += *(arr + i);
+	for (int i = 1; i < sizeof(arr)-1; i+=2) {
 
-			}
-			if (b == false) {
-				res_ *= *(arr + i);
-			}
-			b = !b;
-		}
+			
+			res_ += *(arr + i ) * *(arr + i + 1);
+		
+		
+		++j;
+
+	}
+	if (sizeof(arr) % 2 == 0) {
+		res_ += arr[sizeof(arr) - 1];
 	}
 	return res_;
 
@@ -98,7 +99,7 @@ void CustomExpressionEvaluator::logToFile(const std::string& filename)
 	
 
 
-	vmdelet_out << '\n' << "->" << res_;
+	vmdelet_out << '\n' << "<Result  " << res_ << ">";
 	vmdelet_out.close();
 
 }

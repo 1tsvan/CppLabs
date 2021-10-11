@@ -1,14 +1,14 @@
-﻿  Multiplier.cpp
-D:\С++ Projects\Lab3\1\1\Multiplier.h(5,12): warning C4584: Multiplier: базовый класс "IShuffle" уже является базовым классом для "ExpressionEvaluator"
-D:\С++ Projects\Lab3\1\1\IShuffle.h(2): message : см. объявление "IShuffle"
-D:\С++ Projects\Lab3\1\1\ExpressionEvaluator.h(4): message : см. объявление "ExpressionEvaluator"
-D:\С++ Projects\Lab3\1\1\Multiplier.cpp(73,19): warning C4018: <: несоответствие типов со знаком и без знака
-  main.cpp
-D:\С++ Projects\Lab3\1\1\Multiplier.h(5,12): warning C4584: Multiplier: базовый класс "IShuffle" уже является базовым классом для "ExpressionEvaluator"
-D:\С++ Projects\Lab3\1\1\IShuffle.h(2): message : см. объявление "IShuffle"
-D:\С++ Projects\Lab3\1\1\ExpressionEvaluator.h(4): message : см. объявление "ExpressionEvaluator"
+﻿  CustomExpressionEvaluator.cpp
+D:\С++ Projects\Lab3\1\1\CustomExpressionEvaluator.cpp(33,19): warning C4018: <: несоответствие типов со знаком и без знака
+  Divisor.cpp
 D:\С++ Projects\Lab3\1\1\Divisor.h(5,12): warning C4584: Divisor: базовый класс "IShuffle" уже является базовым классом для "ExpressionEvaluator"
 D:\С++ Projects\Lab3\1\1\IShuffle.h(2): message : см. объявление "IShuffle"
 D:\С++ Projects\Lab3\1\1\ExpressionEvaluator.h(4): message : см. объявление "ExpressionEvaluator"
+D:\С++ Projects\Lab3\1\1\Divisor.cpp(105,20): warning C4018: <: несоответствие типов со знаком и без знака
+  Multiplier.cpp
+D:\С++ Projects\Lab3\1\1\Multiplier.h(5,12): warning C4584: Multiplier: базовый класс "IShuffle" уже является базовым классом для "ExpressionEvaluator"
+D:\С++ Projects\Lab3\1\1\IShuffle.h(2): message : см. объявление "IShuffle"
+D:\С++ Projects\Lab3\1\1\ExpressionEvaluator.h(4): message : см. объявление "ExpressionEvaluator"
+D:\С++ Projects\Lab3\1\1\Multiplier.cpp(70,19): warning C4018: <: несоответствие типов со знаком и без знака
   Создание кода...
   1.vcxproj -> D:\С++ Projects\Lab3\1\Debug\1.exe

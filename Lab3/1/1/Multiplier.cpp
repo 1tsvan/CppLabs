@@ -25,7 +25,7 @@ void Multiplier::logToFile(const std::string& filename) {
 		}
 	}
 	vmdelet_out << ExpressionEvaluator::arr[sizeof(ExpressionEvaluator::arr) - 1];
-	vmdelet_out << '\n' << "-> " <<  res_;
+	vmdelet_out << '\n' << "<Result  " << res_ << ">";
 	vmdelet_out << '\n';
 	vmdelet_out.close();
 
@@ -79,7 +79,7 @@ void Multiplier::setOperand(size_t pos, double value) {
 
 	static double res = 1;
 	ExpressionEvaluator::arr[pos] = value;
-	//res *= arr[pos];
+
 
 
 

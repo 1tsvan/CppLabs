@@ -40,7 +40,7 @@ void Divisor::logToFile(const std::string& filename) {
 
 		
 	
-	vmdelet_out << '\n' <<"->"<< res_;
+	vmdelet_out << '\n' << "<Result  " << res_ << ">";
 	vmdelet_out << '\n';
 	vmdelet_out.close();
 
