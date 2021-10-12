@@ -4,7 +4,7 @@
 
 
 
-void Cond::control(int tempreture)
+void Cond::control(double tempreture)
 {
 
 	if (tempreture < 10) {

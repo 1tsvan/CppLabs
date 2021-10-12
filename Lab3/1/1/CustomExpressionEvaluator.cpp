@@ -8,7 +8,7 @@
 
 
 double CustomExpressionEvaluator::calculate() {
-
+	res_ = 0;
 	 res_ = arr[0];
 	 int j = 1;
 	bool b = true;
@@ -28,43 +28,62 @@ double CustomExpressionEvaluator::calculate() {
 
 }
 
-void CustomExpressionEvaluator::setOperands(double ops[], size_t n)
-{
-	for (int i = 0;i < n;++i) {
-		arr[i] = ops[i];
-	}
 
 
-}
 
-void CustomExpressionEvaluator::setOperand(size_t pos, double value) {
 
-	arr[pos] = value;
 
-}
 
-void CustomExpressionEvaluator::logToScreen()
-{
 
-	std::fstream f;                   
-	f.open("file.txt", std::ios::in);   
-	if (f)                             
-	{
-		std::string buf;
-		std::cout << sizeof(ExpressionEvaluator::arr) << "operands: " << '\n';
-		while (getline(f, buf))        
-		{
-			std::cout << buf << '\n';         
-			    
-		}
-	}
 
-}
 
-void CustomExpressionEvaluator::logToFile(const std::string& filename)
-{
 
-	std::ofstream vmdelet_out;                  
+
+
+
+
+
+
+
+
+
+//void CustomExpressionEvaluator::setOperands(double ops[], size_t n)
+//{
+//	for (int i = 0;i < n;++i) {
+//		arr[i] = ops[i];
+//	}
+//
+//
+//}
+//
+//void CustomExpressionEvaluator::setOperand(size_t pos, double value) {
+//
+//	arr[pos] = value;
+//
+//}
+//
+//void CustomExpressionEvaluator::logToScreen()
+//{
+//
+//	std::fstream f;                   
+//	f.open("file.txt", std::ios::in);   
+//	if (f)                             
+//	{
+//		std::string buf;
+//		std::cout << sizeof(ExpressionEvaluator::arr) << "operands: " << '\n';
+//		while (getline(f, buf))        
+//		{
+//			std::cout << buf << '\n';         
+//			    
+//		}
+//	}
+//
+//}
+//
+//void CustomExpressionEvaluator::logToFile(const std::string& filename)
+//{
+//
+	/*std::ofstream vmdelet_out;                  
 	vmdelet_out.open("file.txt", std::ios::app);
 	bool b = true;
 
@@ -100,9 +119,9 @@ void CustomExpressionEvaluator::logToFile(const std::string& filename)
 
 
 	vmdelet_out << '\n' << "<Result  " << res_ << ">";
-	vmdelet_out.close();
-
-}
+	vmdelet_out.close();*/
+//
+//}
 
 void CustomExpressionEvaluator::shuffle()
 {

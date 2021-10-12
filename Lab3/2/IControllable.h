@@ -4,7 +4,7 @@ class IControllable
 
 public:
 
-	 void virtual control(int tempreture) = 0;
+	 void virtual control(double tempreture) = 0;
 
 };
 

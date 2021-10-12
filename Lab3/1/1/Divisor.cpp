@@ -5,21 +5,44 @@
 
 
 double Divisor::calculate() {
-	res_ = ExpressionEvaluator::arr[0];
 	
-	for (int i = 1; i < sizeof(ExpressionEvaluator::arr) ; ++i) {
+	double res_ = arr[0];
+	
+	for (int i = 1; i < sizeof(arr) ; ++i) {
 		
-		if(*(ExpressionEvaluator::arr + i) != 0)
-			res_ /= *(ExpressionEvaluator::arr + i);
+		if(*(arr + i) != 0)
+			res_ /= *(arr + i);
 
 	}
 	return res_;
 }
 
-void Divisor::logToFile(const std::string& filename) {
 
 
-	std::ofstream vmdelet_out;                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//void Divisor::logToFile(const std::string& filename) {
+//
+//
+	/*std::ofstream vmdelet_out;                    
 	vmdelet_out.open("file.txt", std::ios::app);  
 	for (int i = 0;i < sizeof(ExpressionEvaluator::arr) - 1;++i) {
 		
@@ -42,27 +65,27 @@ void Divisor::logToFile(const std::string& filename) {
 	
 	vmdelet_out << '\n' << "<Result  " << res_ << ">";
 	vmdelet_out << '\n';
-	vmdelet_out.close();
-
-}
-
-void Divisor::logToScreen()
-{
-
-	std::fstream f;                     
-	f.open("file.txt", std::ios::in);  
-	if (f)                            
-	{
-		std::string buf;
-		std::cout << sizeof(ExpressionEvaluator::arr) << "operands: " << '\n';
-		while (getline(f, buf))        
-		{
-			std::cout << buf << '\n';        
-		
-		}
-	}
-
-}
+	vmdelet_out.close();*/
+//
+//}
+//
+//void Divisor::logToScreen()
+//{
+//
+//	std::fstream f;                     
+//	f.open("file.txt", std::ios::in);  
+//	if (f)                            
+//	{
+//		std::string buf;
+//		std::cout << sizeof(ExpressionEvaluator::arr) << "operands: " << '\n';
+//		while (getline(f, buf))        
+//		{
+//			std::cout << buf << '\n';        
+//		
+//		}
+//	}
+//
+//}
 
 void Divisor::shuffle()
 {
@@ -97,25 +120,25 @@ void Divisor::shuffle(size_t i, size_t j)
 		std::swap(ExpressionEvaluator::arr[i], ExpressionEvaluator::arr[j]);
 
 }
+//
+//void Divisor::setOperands(double ops[], size_t n)
+//{
+//
+//	
+//	for (int i = 0; i < n ;++i) {
+//		ExpressionEvaluator::arr[i] = ops[i];
+//	}
+//
+//
+//}
+//
+//void Divisor::setOperand(size_t pos, double value) {
+//
+//
+//	ExpressionEvaluator::arr[pos] = value;
+//
+//	
 
-void Divisor::setOperands(double ops[], size_t n)
-{
-
-	
-	for (int i = 0; i < n ;++i) {
-		ExpressionEvaluator::arr[i] = ops[i];
-	}
-
-
-}
-
-void Divisor::setOperand(size_t pos, double value) {
-
-
-	ExpressionEvaluator::arr[pos] = value;
-
-	
-
-}
+//}
 
 

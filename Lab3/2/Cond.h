@@ -13,7 +13,8 @@ class Cond :
 public:
 
 
-	void control(int tempreture) override;
+//	void control(int tempreture) override;
+	virtual void control(double tempreture);
 	Cond(const char* firm, const char* modelC, double vesC, double tempC, int rezhimC, int yearC);
 	Cond(const char* firm, const char* modelC, double vesC, int yearC);
 	Cond();

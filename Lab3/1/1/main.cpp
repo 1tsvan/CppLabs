@@ -2,9 +2,12 @@
 #include "Multiplier.h"
 
 #include <iostream>
-#include "Divisor.h"
-#include "ExpressionEvaluator.h"
 
+
+#include "ExpressionEvaluator.h"
+#include "IShuffle.h"
+#include "Divisor.h"
+#include "Multiplier.h"
 #include "CustomExpressionEvaluator.h"
 
 
@@ -21,7 +24,7 @@ int main() {
 	ex[0]->shuffle();
 	ex[0]->calculate();
 	ex[0]->logToFile("file.txt");
-	ex[0]->logToScreen();
+	
 
 	ex[1] = new Divisor();
 	double operands2[] = { 150, -3, 10, -2.5 };
@@ -29,7 +32,7 @@ int main() {
 	ex[1]->shuffle();
 	ex[1]->calculate();
 	ex[1]->logToFile("file.txt");
-	ex[1]->logToScreen();
+	
 
 
 	ex[2] = new CustomExpressionEvaluator();
@@ -37,5 +40,17 @@ int main() {
 	ex[2]->setOperands(operands3, 4);
 	ex[2]->calculate();
 	ex[2]->logToFile("file.txt");
-	ex[2]->logToScreen();
+	
+
+
+	for (int i = 0; i < 3; i++)
+	{
+		if (dynamic_cast<IShuffle*>(ex[i]) != NULL)
+		{
+			ex[i]->logToScreen();
+		}
+	}
+
+	
+
 }

@@ -12,11 +12,12 @@ int main() {
 	Cond& c1 = dynamic_cast<Cond&>(h);
 
 
-	c1.control(c1.temp);
+	if (typeid(c1) == typeid(Cond)) c1.control(c1.temp);
 	c1.price = 1234;
 	c1.getprice();
 	c1.serialize();
 	c1.deserialize();
+	
 
 
 	Cond cond2 = Cond();
@@ -24,11 +25,13 @@ int main() {
 	Cond& c2 = dynamic_cast<Cond&>(h2);
 
 	c2.setcond("BNaikjnbdfs", "0204", 23.2, 21, 1, 2020);
+	if (typeid(c2) == typeid(Cond)) c2.control(c2.temp);
 	c2.color = "Red";
 	c2.price = 123;
 	c2.getColor();
 	c2.serialize();
 	c2.deserialize();
+	
 
 
 
@@ -40,12 +43,12 @@ int main() {
 
 	heater.firma = "Next Door - Everything is 300$";
 	heater.temp = 23;
+	if (typeid(heater) == typeid(Heater)) heater.control(heater.temp);
 	heater.setColor("Black");
 	heater.getColor();
-	heater.control(heater.temp);
 	heater.serializeHeater();
 	heater.deserializeHeater();
-
+	
 	
 
 

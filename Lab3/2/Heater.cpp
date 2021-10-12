@@ -2,7 +2,7 @@
 #include <iostream>
 #include "fstream"
 
-void Heater::control(int tempreture)
+void Heater::control(double tempreture)
 {
 	if (tempreture > 45)
 		std::cout << "Heater OFF" << '\n';
