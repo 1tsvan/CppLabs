@@ -9,7 +9,7 @@ class CustomExpressionEvaluator :
 public:
 	
 	double calculate() override;
-	virtual void shuffle(); 
-	virtual void shuffle(size_t i, size_t j);
+	 void shuffle() override; 
+	 void shuffle(size_t i, size_t j) override;
 };
 

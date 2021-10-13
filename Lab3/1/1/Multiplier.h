@@ -15,9 +15,9 @@ public:
 	void setOperand(size_t pos, double value) override;
 	void logToScreen() override;
 	void logToFile(const std::string& filename) override;*/
-	 virtual void shuffle();// override;
+	  void shuffle() override;
  
-	 virtual void shuffle(size_t i, size_t j);
+	  void shuffle(size_t i, size_t j) override;
 
 
 };

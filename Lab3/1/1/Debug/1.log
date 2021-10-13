@@ -1,8 +1,29 @@
-﻿  ExpressionEvaluator.cpp
+﻿  CustomExpressionEvaluator.cpp
+D:\С++ Projects\Lab3\1\1\CustomExpressionEvaluator.h(5,12): warning C4584: CustomExpressionEvaluator: базовый класс "IShuffle" уже является базовым классом для "ExpressionEvaluator"
+D:\С++ Projects\Lab3\1\1\IShuffle.h(2): message : см. объявление "IShuffle"
+D:\С++ Projects\Lab3\1\1\ExpressionEvaluator.h(4): message : см. объявление "ExpressionEvaluator"
+D:\С++ Projects\Lab3\1\1\CustomExpressionEvaluator.cpp(12,15): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab3\1\1\CustomExpressionEvaluator.cpp(18,40): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+D:\С++ Projects\Lab3\1\1\CustomExpressionEvaluator.cpp(25,31): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+  Divisor.cpp
+D:\С++ Projects\Lab3\1\1\Divisor.h(5,12): warning C4584: Divisor: базовый класс "IShuffle" уже является базовым классом для "ExpressionEvaluator"
+D:\С++ Projects\Lab3\1\1\IShuffle.h(2): message : см. объявление "IShuffle"
+D:\С++ Projects\Lab3\1\1\ExpressionEvaluator.h(4): message : см. объявление "ExpressionEvaluator"
+  ExpressionEvaluator.cpp
 D:\С++ Projects\Lab3\1\1\Divisor.h(5,12): warning C4584: Divisor: базовый класс "IShuffle" уже является базовым классом для "ExpressionEvaluator"
 D:\С++ Projects\Lab3\1\1\IShuffle.h(2): message : см. объявление "IShuffle"
 D:\С++ Projects\Lab3\1\1\ExpressionEvaluator.h(4): message : см. объявление "ExpressionEvaluator"
 D:\С++ Projects\Lab3\1\1\CustomExpressionEvaluator.h(5,12): warning C4584: CustomExpressionEvaluator: базовый класс "IShuffle" уже является базовым классом для "ExpressionEvaluator"
 D:\С++ Projects\Lab3\1\1\IShuffle.h(2): message : см. объявление "IShuffle"
 D:\С++ Projects\Lab3\1\1\ExpressionEvaluator.h(4): message : см. объявление "ExpressionEvaluator"
+  Multiplier.cpp
+D:\С++ Projects\Lab3\1\1\Multiplier.cpp(12,64): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
+  main.cpp
+D:\С++ Projects\Lab3\1\1\Divisor.h(5,12): warning C4584: Divisor: базовый класс "IShuffle" уже является базовым классом для "ExpressionEvaluator"
+D:\С++ Projects\Lab3\1\1\IShuffle.h(2): message : см. объявление "IShuffle"
+D:\С++ Projects\Lab3\1\1\ExpressionEvaluator.h(4): message : см. объявление "ExpressionEvaluator"
+D:\С++ Projects\Lab3\1\1\CustomExpressionEvaluator.h(5,12): warning C4584: CustomExpressionEvaluator: базовый класс "IShuffle" уже является базовым классом для "ExpressionEvaluator"
+D:\С++ Projects\Lab3\1\1\IShuffle.h(2): message : см. объявление "IShuffle"
+D:\С++ Projects\Lab3\1\1\ExpressionEvaluator.h(4): message : см. объявление "ExpressionEvaluator"
+  Создание кода...
   1.vcxproj -> D:\С++ Projects\Lab3\1\Debug\1.exe
