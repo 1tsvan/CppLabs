@@ -1,0 +1,6 @@
+﻿  Game.cpp
+D:\С++ Projects\L_4\L_4\Game.cpp(25,20): warning C4018: <: несоответствие типов со знаком и без знака
+D:\С++ Projects\L_4\L_4\Game.cpp(82,13): warning C4101: a: неиспользованная локальная переменная
+D:\С++ Projects\L_4\L_4\Game.cpp(99,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\С++ Projects\L_4\L_4\Game.cpp(103,23): warning C4018: <: несоответствие типов со знаком и без знака
+  L_4.vcxproj -> D:\С++ Projects\L_4\Debug\L_4.exe
